@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="nssucek.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title></title>
+        <title>NSSUCEK</title>
+        <style>
+            {% load static %}
+         *{
+            border-box:none;
+        }
+      
+        .row{
+            display:flex;
+        }
+         .image{
+            display:flex;
+            margin: 0 auto;
+            margin-top: 30px;
+         }
+        .image img{
+            width: 250px;
+            height: 250px;
+            gap: 0px;
+            opacity: 0px;
+            display:flex;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+        .first-head h1{
+          font-family: K2D;
+          font-size: 75px;
+          font-weight: 800;
+          line-height: 97.5px;
+          text-align: center;
+          color:  #000000;
+        }
+        .second-ellipse button{
+           background-color: #031420;
+           width: 250px;
+           height: 70px;
+           gap: 0px;
+           border-radius: 60px;
+           opacity: 0px;
+           justify-content:center;
+           display: flex;
+           place-items: center;
+           margin:0 auto;
+           text-align:center;
+        }
+        button h1{
+          font-family: K2D;
+          font-size: 25px;
+          font-weight: 800;
+          text-align: center;
+          color:#ffffff;
+          margin:0 auto;
+        }
+        .second-ellipse{
+          margin: 0 auto;
+        }
+        .second-ellipse:hover {
+            transform: translateY(-5px);
+        }
+        .first-ellipse{
+          width: 550px;
+          height: 90px;
+          top: 372px;
+          left: 445px;
+          gap: 0px;
+          border-radius: 60px;
+          opacity: 0px;
+          background-color:blue;
+          margin: 0 auto;
+        }
+        .form{
+          font-family: K2D;
+          font-size: 30px;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 60px;
+          margin-top: 20px;
+          color: #FFFFFF;
+          border: 60px;
+        }
+        .link{
+            margin-top:120px;
+        }
+      @media only screen and (min-width:768px) and (max-width: 992px) {
+        .card{
+            width: 295px;
+            height: 291px;
+            background: linear-gradient(to bottom,#0D5386,#031420);
+            gap: 0px;
+            border-radius: 40px;
+            opacity: 0px;
+            margin:0 auto;
+            margin-top: 200px;
+        }
+        .card img{
+            width: 150px;
+            height: 150px;
+            gap: 0px;
+            opacity: 0px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+      .card-body{
+        font-family: K2D;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 65px;
+
+      }
+      }
+      @media only screen and  (min-width:567.2px) and (max-width:768px){
+        .card{
+            width: 150px;
+            height: 171px;
+            border-radius: 30px;
+            opacity: 0px;
+            margin:0 auto;
+            margin-top: 250px;
+        }
+        .card img{
+            width: 70px;
+            height: 70px;
+            gap: 0px;
+            opacity: 0px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+      .card-body{
+        font-size: 10px;
+        line-height: 15px;
+
+      }
+      }
+      @media only screen and (max-width:576.98px){
+       
+        .row{
+            display:flex;
+        }
+         .image{
+            display:flex;
+            margin: 0 auto;
+            margin-top: 30px;
+         }
+        .image img{
+            width: 150px;
+            height: 150px;
+            display:flex;
+            margin: 0 auto;
+            margin-top: 80px;
+        }
+        .first-head h1{
+          font-family: K2D;
+          font-size: 40px;
+          font-weight: 800;
+          line-height: 97.5px;
+        }
+        .second-ellipse button{
+           background-color: #031420;
+           width: 130px;
+           height: 50px;
+           gap: 0px;
+           border-radius: 60px;
+           opacity: 0px;
+           justify-content:center;
+           display: flex;
+           place-items: center;
+           margin:0 auto;
+           text-align:center;
+        }
+        button h1{
+          font-family: K2D;
+          font-size: 15px;
+          font-weight: 800;
+          text-align: center;
+          color:#ffffff;
+          margin:0 auto;
+        }
+        .second-ellipse{
+          margin: 0 auto;
+        }
+        .second-ellipse:hover {
+            transform: translateY(-5px);
+        }
+        .first-ellipse{
+          width: 200px;
+          height: 50px;
+          top: 372px;
+          left: 445px;
+          gap: 0px;
+          border-radius: 60px;
+          opacity: 0px;
+          background-color:blue;
+          margin: 0 auto;
+        }
+        .form{
+          font-family: K2D;
+          font-size: 10px;
+          font-weight: 200;
+          text-align: center;
+          border-radius: 60px;
+          margin-top: 15px;
+          color: #FFFFFF;
+          border: 60px;
+        }
+      }
+
+        </style>
+    </head>
+    <body>
+    
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 image ">
+                    <img src="{% static 'charity.png' %}" class="card-img-top " alt="...">
+            </div>
+            <div class="card-text first-head">
+              <h1>Add Volunteer</h1>
+            </div>
+            <div class="first-ellipse">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form">
+                    {{ form.as_p }}
+                    </div>
+                    <div class="second-ellipse mt-4">
+                    <button type="submit"><h1>Add</h1></button>
+                    </div>
+                </form>
+            </div>
+          </div>
+     </div>
+     <div class="link text-center ">
+        <a href="{% url 'mark_attendance' %}">Go to Mark Attendance</a>
+      </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body> 
+</html>

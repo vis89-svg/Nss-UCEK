@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer List</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h1>Volunteer List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Volunteer Name</th>
+                <th>Event</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form method="post">
+                {% csrf_token %}
+                {% for volunteer in volunteers %}
+                    <tr>
+                        <td>{{ volunteer.name }}</td>
+                        <td>
+                            <select name="event_id">
+                                <option value="">Select Event</option>
+                                {% for event in events %}
+                                    <option value="{{ event.id }}">{{ event.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td>
+                            <button type="submit" name="volunteer_id" value="{{ volunteer.id }}">Mark Present</button>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3">No volunteers found</td>
+                    </tr>
+                {% endfor %}
+            </form>
+        </tbody>
+    </table>
+    <a href="{% url 'add_volunteer' %}">Add New Volunteer</a>
+    <a href="{% url 'add_event' %}">Add New Event</a>
+    <a href="{% url 'attendance_display' %}">View Attendance</a>
+</body>
+</html>

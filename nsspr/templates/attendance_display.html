@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Display</title>
+    <style>
+      
+        .button{
+
+            display:flex;
+            flex-dierection:column;
+            float:right;
+            margin-top: -50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+             <h1>Attendance Display</h1>
+            </div>
+            <div  class="col-6 button">
+                <a  href="{% url 'attendance' %}" style="text-decoration:none;">
+              <button class="btn"> LOG OUT</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Search Form -->
+    <form method="GET" action="{% url 'attendance_display' %}">
+        <input type="text" name="search" placeholder="Search events..." value="{{ request.GET.search }}">
+        <button type="submit">Search</button>
+    </form>
+    
+    {% for event, records in event_records.items %}
+        <h2>{{ event.name }} - {{ event.date }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Volunteer Name</th>
+                    <th>Present</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td>{{ record.volunteer.name }}</td>
+                        <td>{{ record.present }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="2">No volunteers present for this event</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% empty %}
+        <p>No attendance records found.</p>
+    {% endfor %}
+</body>
+</html>
