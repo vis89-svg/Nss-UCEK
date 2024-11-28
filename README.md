@@ -1,6 +1,8 @@
 
 NSS UCEK Website
+
 The NSS UCEK Website is a comprehensive platform designed to manage and display information about the National Service Scheme (NSS) activities at University College of Engineering, Kariavattom (UCEK). The website includes features to display events, track volunteer attendance, manage camp details, and enable volunteers to search their attendance records.
+
 Features
 Events Display
 Showcases all past and upcoming events organized by NSS UCEK.
